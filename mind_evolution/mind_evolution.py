@@ -13,7 +13,7 @@ def exists(v):
 def default(v, d):
     return v if exists(v) else d
 
-# operators
+# diversity related
 
 def init_islands(
     model: Module,
@@ -31,10 +31,12 @@ def reset_island(
 ) -> Islands:
     raise NotImplementedError
 
-def fitness(
-    solution: str
-) -> float:
+def diversity_search(
+    solutions: list[str]
+) -> list[str]
     raise NotImplementedError
+
+# mutation related
 
 def refinement(
     critics: list[Module],
@@ -45,6 +47,13 @@ def refinement(
 def mutation(
     solution: str
 ) -> str:
+    raise NotImplementedError
+
+# crossover / reproduction related
+
+def fitness(
+    solution: str
+) -> float:
     raise NotImplementedError
 
 def tournament_selection(
