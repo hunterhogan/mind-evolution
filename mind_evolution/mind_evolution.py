@@ -33,7 +33,7 @@ def reset_island(
 
 def diversity_search(
     solutions: list[str]
-) -> list[str]
+) -> list[str]:
     raise NotImplementedError
 
 # mutation related
